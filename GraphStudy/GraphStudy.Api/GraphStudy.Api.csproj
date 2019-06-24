@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GraphStudy.Moives\GraphStudy.Moives.csproj" />
+    <ProjectReference Include="..\GraphStudy.Menu\GraphStudy.Menu.csproj" />
   </ItemGroup>
 
 </Project>
