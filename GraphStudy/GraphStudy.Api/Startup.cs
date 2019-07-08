@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using GraphQL;
 using GraphQL.Server;
 using GraphQL.Server.Ui.Playground;
+using GraphQL.Server.Ui.GraphiQL;
 using GraphStudy.Menu.Schema;
 using GraphStudy.Menu.Service;
 using Microsoft.AspNetCore.Builder;
@@ -60,7 +61,9 @@ namespace GraphStudy.Api
 
             //去点另外两个UI，因为我们刚刚添加的包就是Playground，所以保留这个就行
             // use graphql-playground middleware at default url /ui/playground
-            app.UseGraphQLPlayground(new GraphQLPlaygroundOptions());
+            //app.UseGraphQLPlayground(new GraphQLPlaygroundOptions());
+
+            app.UseGraphiQLServer(new GraphiQLOptions());
         }
     }
 }

@@ -18,30 +18,52 @@ namespace GraphStudy.Menu.Service
                 new Drinks
                 {
                     id = 1,
-                    name = "蘋果醋"
+                    name = "檸檬汁"
                 },
                 new Drinks
                 {
                     id = 2,
-                    name = "伯爵紅茶"
+                    name = "冰淇淋紅茶"
                 },
                 new Drinks
                 {
                     id = 3,
-                    name = "英倫奶茶"
+                    name = "咖啡拿鐵"
                 },
                 new Drinks
                 {
                     id = 4,
-                    name = "榛果牛奶"
+                    name = "蘋果醋"
                 },
                 new Drinks
                 {
                     id = 5,
+                    name = "伯爵紅茶"
+                },
+                new Drinks
+                {
+                    id = 6,
+                    name = "英倫奶茶"
+                },
+                new Drinks
+                {
+                    id = 7,
+                    name = "榛果牛奶"
+                },
+                new Drinks
+                {
+                    id = 8,
                     name = "草莓牛奶"
                 }
                 #endregion
             };
+        }
+        /// <summary>
+        /// 取得所有飲料
+        /// </summary>
+        public List<Drinks> GetAllDrinks()
+        {
+            return allDrinks;
         }
 
         /// <summary>
