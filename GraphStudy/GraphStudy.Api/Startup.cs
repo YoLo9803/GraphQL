@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using GraphQL;
 using GraphQL.Server;
-using GraphQL.Server.Ui.Playground;
 using GraphQL.Server.Ui.GraphiQL;
 using GraphStudy.Menu.Schema;
 using GraphStudy.Menu.Service;
@@ -24,9 +23,11 @@ namespace GraphStudy.Api
         {
             services.AddSingleton<IMealService, MealService>();
             services.AddSingleton<IDrinksService, DrinksService>();
+            services.AddSingleton<IDessertService, DessertService>();
 
             services.AddSingleton<DrinksType>();
             services.AddSingleton<MealType>();
+            services.AddSingleton<DessertType>();
             services.AddSingleton<MenuQuery>();
             services.AddSingleton<MenuSchema>();
 

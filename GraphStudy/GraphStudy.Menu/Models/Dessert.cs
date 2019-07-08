@@ -5,21 +5,17 @@ using System.Text;
 namespace GraphStudy.Menu.Models
 {
     /// <summary>
-    /// 餐點
+    /// 甜點
     /// </summary>
-    public class Meal
+    public class Dessert
     {
         /// <summary>
-        /// 餐點編號
+        /// 甜點編號
         /// </summary>
         public int id { get; set; }
         /// <summary>
-        /// 餐點名稱
+        /// 甜點名稱
         /// </summary>
         public string name { get; set; }
-        /// <summary>
-        /// 配料編號
-        /// </summary>
-        public int dessertId { get; set; }
     }
 }

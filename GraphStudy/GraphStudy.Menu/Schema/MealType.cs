@@ -6,17 +6,17 @@ namespace GraphStudy.Menu.Schema
 {
     public class MealType : ObjectGraphType<Meal>
     {
-        public MealType(IDrinksService drinksService)
+        public MealType(IDessertService dessertService)
         {
             //餐點編號
             Field(context => context.id);
             //餐點名稱
             Field(context => context.name);
-            //餐點配料
-            Field(context => context.DrinksId);
+            //搭配飲料的編號
+            Field(context => context.dessertId);
             //搭配的飲料
-            Field<DrinksType>("drinks", resolve: 
-                context => drinksService.GetDrinksById(context.Source.DrinksId));
+            Field<DessertType>("dessert", resolve: 
+                context => dessertService.GetDessertById(context.Source.dessertId));
         }
     }
 }

@@ -18,31 +18,31 @@ namespace GraphStudy.Menu.Service
                 {
                     id = 1,
                     name = "炸豬排飯",
-                    DrinksId = 4
+                    dessertId = 1
                 },
                 new Meal
                 {
                     id = 2,
                     name = "綠咖哩飯",
-                    DrinksId = 5
+                    dessertId = 2
                 },
                 new Meal
                 {
                     id = 3,
                     name = "肉醬義大利麵",
-                    DrinksId = 6
+                    dessertId = 3
                 },
                 new Meal
                 {
                     id = 4,
                     name = "法式酸奶佐鄉村麵包",
-                    DrinksId = 7
+                    dessertId = 4
                 },
                 new Meal
                 {
                     id = 5,
                     name = "快樂兒童餐",
-                    DrinksId = 8
+                    dessertId = 5
                 } 
                 #endregion
             };

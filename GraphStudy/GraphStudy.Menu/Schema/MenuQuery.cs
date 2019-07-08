@@ -10,13 +10,12 @@ namespace GraphStudy.Menu.Schema
         public MenuQuery(IMealService mealService, IDrinksService drinksService)
         {
             //查詢所有餐點
-            Field<ListGraphType<MealType>>("meals", 
+            Field<ListGraphType<MealType>>("meal", 
                 resolve: context => mealService.GetAllMeals());
 
-            Field<MealType>("set", resolve: context => mealService.GetMealById(1));
-
-            Field<ListGraphType<DrinksType>> ("drinks",
+            Field<ListGraphType<DrinksType>> ("drink",
                 resolve: context => drinksService.GetAllDrinks());
+
         }
     }
 }
