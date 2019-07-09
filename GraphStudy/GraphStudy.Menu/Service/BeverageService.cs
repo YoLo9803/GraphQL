@@ -6,51 +6,51 @@ using GraphStudy.Menu.Models;
 
 namespace GraphStudy.Menu.Service
 {
-    public class DrinksService : IDrinksService
+    public class BeverageService : IBeverageService
     {
-        private readonly List<Drinks> allDrinks;
+        private readonly List<Beverage> allBeverages;
 
-        public DrinksService()
+        public BeverageService()
         {
-            allDrinks = new List<Drinks>
+            allBeverages = new List<Beverage>
             {
                 #region 配料列表
-                new Drinks
+                new Beverage
                 {
                     id = 1,
                     name = "檸檬汁"
                 },
-                new Drinks
+                new Beverage
                 {
                     id = 2,
                     name = "冰淇淋紅茶"
                 },
-                new Drinks
+                new Beverage
                 {
                     id = 3,
                     name = "咖啡拿鐵"
                 },
-                new Drinks
+                new Beverage
                 {
                     id = 4,
                     name = "蘋果醋"
                 },
-                new Drinks
+                new Beverage
                 {
                     id = 5,
                     name = "伯爵紅茶"
                 },
-                new Drinks
+                new Beverage
                 {
                     id = 6,
                     name = "英倫奶茶"
                 },
-                new Drinks
+                new Beverage
                 {
                     id = 7,
                     name = "榛果牛奶"
                 },
-                new Drinks
+                new Beverage
                 {
                     id = 8,
                     name = "草莓牛奶"
@@ -61,9 +61,9 @@ namespace GraphStudy.Menu.Service
         /// <summary>
         /// 取得所有飲料
         /// </summary>
-        public List<Drinks> GetAllDrinks()
+        public List<Beverage> GetAllBeverages()
         {
-            return allDrinks;
+            return allBeverages;
         }
 
         /// <summary>
@@ -71,14 +71,14 @@ namespace GraphStudy.Menu.Service
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Drinks GetDrinksById(int id)
+        public Beverage GetBeverageById(int id)
         {
-            Drinks drinks = allDrinks.SingleOrDefault(context => context.id == id);
-            if (drinks == null)
+            Beverage beverage = allBeverages.SingleOrDefault(context => context.id == id);
+            if (beverage == null)
             {
                 throw new ArgumentException(String.Format("Meal ID {0} 不正確", id));
             }
-            return drinks;
+            return beverage;
         }
     }
 }

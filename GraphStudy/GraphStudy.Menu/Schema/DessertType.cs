@@ -3,6 +3,9 @@ using GraphStudy.Menu.Models;
 
 namespace GraphStudy.Menu.Schema
 {
+    /// <summary>
+    /// 點心ObjectType
+    /// </summary>
     public class DessertType : ObjectGraphType<Dessert>
     {
         public DessertType()

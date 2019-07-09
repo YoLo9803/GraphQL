@@ -1,9 +1,9 @@
 ﻿namespace GraphStudy.Menu.Models
 {
     /// <summary>
-    /// 配料
+    /// 飲料
     /// </summary>
-    public class Drinks
+    public class Beverage
     {
         /// <summary>
         /// 飲料編號

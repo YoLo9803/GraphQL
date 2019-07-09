@@ -3,13 +3,16 @@ using GraphStudy.Menu.Models;
 
 namespace GraphStudy.Menu.Schema
 {
-    public class DrinksType : ObjectGraphType<Drinks>
+    /// <summary>
+    /// 飲料ObjectType
+    /// </summary>
+    public class BeverageType : ObjectGraphType<Beverage>
     {
-        public DrinksType()
+        public BeverageType()
         {
-            //配料編號
+            //飲料編號
             Field(context => context.id);
-            //配料名稱
+            //飲料名稱
             Field(context => context.name);
         }
     }

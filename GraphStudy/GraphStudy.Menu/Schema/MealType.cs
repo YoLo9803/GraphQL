@@ -4,6 +4,9 @@ using GraphStudy.Menu.Service;
 
 namespace GraphStudy.Menu.Schema
 {
+    /// <summary>
+    /// 餐點ObjectType
+    /// </summary>
     public class MealType : ObjectGraphType<Meal>
     {
         public MealType(IDessertService dessertService)

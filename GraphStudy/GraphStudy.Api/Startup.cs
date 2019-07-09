@@ -22,12 +22,14 @@ namespace GraphStudy.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IMealService, MealService>();
-            services.AddSingleton<IDrinksService, DrinksService>();
+            services.AddSingleton<IBeverageService, BeverageService>();
             services.AddSingleton<IDessertService, DessertService>();
+            services.AddSingleton<IComboService, ComboService>();
 
-            services.AddSingleton<DrinksType>();
+            services.AddSingleton<BeverageType>();
             services.AddSingleton<MealType>();
             services.AddSingleton<DessertType>();
+            services.AddSingleton<ComboType>();
             services.AddSingleton<MenuQuery>();
             services.AddSingleton<MenuSchema>();
 
