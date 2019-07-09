@@ -10,7 +10,7 @@ namespace GraphStudy.Menu.Schema
     public class MenuQuery : ObjectGraphType
     {
         //Query的ObjectType
-        public MenuQuery(IMealService mealService, IBeverageService beverageService, IComboService comboService)
+        public MenuQuery(IMealService mealService, IBeverageService beverageService)
         {
             //查詢所有餐點
             Field<ListGraphType<MealType>>("meal", 
@@ -18,9 +18,6 @@ namespace GraphStudy.Menu.Schema
             //查詢所有飲料
             Field<ListGraphType<BeverageType>> ("drink",
                 resolve: context => beverageService.GetAllBeverages());
-            //查詢所有套餐
-            Field<ListGraphType<ComboType>>("combo",
-                resolve: context => comboService.GetAllCombos());
 
         }
     }
