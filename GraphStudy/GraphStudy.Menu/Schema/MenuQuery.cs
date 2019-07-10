@@ -16,7 +16,7 @@ namespace GraphStudy.Menu.Schema
             Field<ListGraphType<MealType>>("meal", 
                 resolve: context => mealService.GetAllMeals());
             //查詢所有飲料
-            Field<ListGraphType<BeverageType>> ("drink",
+            Field<ListGraphType<BeverageType>> ("beverage",
                 resolve: context => beverageService.GetAllBeverages());
             //查詢所有套餐
             Field<ListGraphType<ComboType>>("combo",

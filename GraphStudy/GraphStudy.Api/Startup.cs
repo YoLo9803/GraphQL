@@ -21,6 +21,7 @@ namespace GraphStudy.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //DI
             services.AddSingleton<IMealService, MealService>();
             services.AddSingleton<IBeverageService, BeverageService>();
             services.AddSingleton<IDessertService, DessertService>();
@@ -61,10 +62,6 @@ namespace GraphStudy.Api
 
             // use HTTP middleware for ChatSchema at path /graphql
             app.UseGraphQL<MenuSchema>("/graphql");
-
-            //去点另外两个UI，因为我们刚刚添加的包就是Playground，所以保留这个就行
-            // use graphql-playground middleware at default url /ui/playground
-            //app.UseGraphQLPlayground(new GraphQLPlaygroundOptions());
 
             app.UseGraphiQLServer(new GraphiQLOptions());
         }

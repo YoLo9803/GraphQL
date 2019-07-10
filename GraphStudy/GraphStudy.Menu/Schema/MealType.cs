@@ -15,8 +15,6 @@ namespace GraphStudy.Menu.Schema
             Field(context => context.id);
             //餐點名稱
             Field(context => context.name);
-            //搭配飲料的編號
-            Field(context => context.dessertId);
             //搭配的飲料
             Field<DessertType>("dessert", resolve: 
                 context => dessertService.GetDessertById(context.Source.dessertId));
