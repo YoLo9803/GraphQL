@@ -3,3 +3,6 @@ GraphStudy/GraphStudy.Api/bin/
 GraphStudy/GraphStudy.Api/obj/
 GraphStudy/GraphStudy.Menu/obj/
 GraphStudy/GraphStudy.Menu/bin/
+.vs/
+GraphStudy/GraphStudy.Models/obj/
+GraphStudy/GraphStudy.Services/obj/

@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Schema\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -14,10 +15,6 @@
     <PackageReference Include="GraphQL.Server.Ui.GraphiQL" Version="3.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\GraphStudy.Menu\GraphStudy.Menu.csproj" />
   </ItemGroup>
 
 </Project>
