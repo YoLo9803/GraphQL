@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 using GraphQL;
 using GraphQL.Server;
 using GraphQL.Server.Ui.GraphiQL;
-using GraphStudy.Menu.Schema;
-using GraphStudy.Menu.Service;
+using GraphStudy.Api.Schema;
+using GraphStudy.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using GraphQL.Instrumentation;
+using Newtonsoft.Json;
 
 namespace GraphStudy.Api
 {
@@ -21,16 +22,11 @@ namespace GraphStudy.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IMealService, MealService>();
-            services.AddSingleton<IDrinksService, DrinksService>();
-            services.AddSingleton<IDessertService, DessertService>();
-
-            services.AddSingleton<DrinksType>();
-            services.AddSingleton<MealType>();
-            services.AddSingleton<DessertType>();
-            services.AddSingleton<MenuQuery>();
-            services.AddSingleton<MenuSchema>();
-
+            services.AddSingleton<GraphStudySchema>();
+            services.AddSingleton<UserType>();
+            services.AddSingleton<QueryType>();
+            services.AddSingleton<IUserService, UserService>();
+            
             services.AddSingleton<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));
 
             // Add GraphQL services and configure options
@@ -55,10 +51,10 @@ namespace GraphStudy.Api
             app.UseWebSockets();
 
             // use websocket middleware for ChatSchema at path /graphql
-            app.UseGraphQLWebSockets<MenuSchema>("/graphql");
+            app.UseGraphQLWebSockets<GraphStudySchema>("/graphql");
 
             // use HTTP middleware for ChatSchema at path /graphql
-            app.UseGraphQL<MenuSchema>("/graphql");
+            app.UseGraphQL<GraphStudySchema>("/graphql");
 
             //去点另外两个UI，因为我们刚刚添加的包就是Playground，所以保留这个就行
             // use graphql-playground middleware at default url /ui/playground

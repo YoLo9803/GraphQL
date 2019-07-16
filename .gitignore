@@ -6,3 +6,7 @@ GraphStudy/GraphStudy.Menu/bin/
 .vs/
 GraphStudy/GraphStudy.Models/obj/
 GraphStudy/GraphStudy.Services/obj/
+GraphStudy/GraphStudy.Services/bin/
+GraphStudy/GraphStudy.Models/bin/
+GraphStudy/GraphStudy.Api.RESTful/obj/
+GraphStudy/GraphStudy.Api.RESTful/bin/
