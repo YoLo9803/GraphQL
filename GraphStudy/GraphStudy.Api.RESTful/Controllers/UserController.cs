@@ -9,7 +9,6 @@ using GraphStudy.Services;
 
 namespace GraphStudy.Api.RESTful.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -29,10 +28,11 @@ namespace GraphStudy.Api.RESTful.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("{id}")]
-        public ActionResult<User> Get(int id)
+        [HttpGet]
+        [Route("api/[controller]/{userId}")]
+        public ActionResult<User> GetUserById(int userId)
         {
-            return userService.GetUserById(id);
+            return userService.GetUserById(userId);
         }
     }
 }

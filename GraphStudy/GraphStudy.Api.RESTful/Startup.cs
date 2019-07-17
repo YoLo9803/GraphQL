@@ -35,6 +35,7 @@ namespace GraphStudy.Api.RESTful
                 });
             //DI
             services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IFriendService, FriendService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

@@ -25,7 +25,9 @@ namespace GraphStudy.Api
             services.AddSingleton<GraphStudySchema>();
             services.AddSingleton<UserType>();
             services.AddSingleton<QueryType>();
+            services.AddSingleton<FriendType>();
             services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IFriendService, FriendService>();
             
             services.AddSingleton<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));
 
