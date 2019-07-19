@@ -31,6 +31,14 @@ namespace GraphStudy.Services
                 new User{
                     Id = 4,
                     Name = "Binson"
+                },
+                new User{
+                    Id = 5,
+                    Name = "Elisa"
+                },
+                new User{
+                    Id = 6,
+                    Name = "Jacky"
                 }
             };
         }

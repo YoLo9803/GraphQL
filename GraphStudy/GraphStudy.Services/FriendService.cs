@@ -27,6 +27,18 @@ namespace GraphStudy.Services
                 },
                 new Friend
                 {
+                    UserId = 1,
+                    FriendId = 5,
+                    CreateDate = new DateTime(2018,6,3)
+                },
+                new Friend
+                {
+                    UserId = 1,
+                    FriendId = 6,
+                    CreateDate = new DateTime(2019,4,9)
+                },
+                new Friend
+                {
                     UserId = 2,
                     FriendId = 1,
                     CreateDate = new DateTime(2019,3,23)
@@ -73,6 +85,18 @@ namespace GraphStudy.Services
                     FriendId = 3,
                     CreateDate = new DateTime(2012,12,6)
                 },
+                new Friend
+                {
+                    UserId = 5,
+                    FriendId = 1,
+                    CreateDate = new DateTime(2018,6,3)
+                },
+                new Friend
+                {
+                    UserId = 6,
+                    FriendId = 1,
+                    CreateDate = new DateTime(2019,4,9)
+                }
             };
         }
 
