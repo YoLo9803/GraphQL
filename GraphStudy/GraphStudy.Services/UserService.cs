@@ -19,7 +19,7 @@ namespace GraphStudy.Services
                 new User{
                     Id = 1,
                     Name = "chris",
-                    FriendIds = new List<int>{2,4}
+                    FriendIds = new List<int>{2,4,5,6}
                 },
                 new User{
                     Id = 2,
@@ -35,6 +35,16 @@ namespace GraphStudy.Services
                     Id = 4,
                     Name = "Binson",
                     FriendIds = new List<int>{1,2,3}
+                },
+                new User{
+                    Id = 5,
+                    Name = "Elisa",
+                    FriendIds = new List<int>{1}
+                },
+                new User{
+                    Id = 6,
+                    Name = "Jacky",
+                    FriendIds = new List<int>{1}
                 }
             };
         }

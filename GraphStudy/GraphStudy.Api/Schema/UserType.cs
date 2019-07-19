@@ -14,8 +14,10 @@ namespace GraphStudy.Api.Schema
             //使用者名稱
             Field(context => context.Name);
             //朋友
-            Field<ListGraphType<UserType>>("friend", resolve:
-                context => 
+            Field<ListGraphType<UserType>>
+            (
+                "friend",
+                resolve: context => 
                 {
                     List<User> friendList = new List<User>();
                     foreach (int friendId in context.Source.FriendIds)
@@ -23,7 +25,8 @@ namespace GraphStudy.Api.Schema
                         friendList.Add(userService.GetUserById(friendId));
                     }
                     return friendList;
-                });
+                }
+            );
         }
     }
 }
